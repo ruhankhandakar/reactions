@@ -15,11 +15,11 @@ export const getStaticProps = async () => {
 };
 
 
-export default function Home({ reactions, updatedAt }) {
-  const timeString = new Date(updatedAt).toLocaleTimeString();
+export default function Home({ reactions, updateAt }) {
+  const timeString = new Date(updateAt).toLocaleTimeString();
   return (
     <div style={{ backgroundColor: 'teal' }}>
-      {updateAt}
+      {timeString}
       {data.map((carrier) => (
         <div key={carrier.courier_name}>
           <div> {carrier.courier_name}</div>
