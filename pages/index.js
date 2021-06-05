@@ -15,7 +15,7 @@ export const getStaticProps = async () => {
 };
 
 
-export default function Home({ reactions, updateAt }) {
+export default function Home({ data, updateAt }) {
   const timeString = new Date(updateAt).toLocaleTimeString();
   return (
     <div style={{ backgroundColor: 'teal' }}>
