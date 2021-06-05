@@ -53,13 +53,15 @@ export async function getStaticProps() {
 
   return {
     props: {
-      reactions
+      reactions,
+      updatedAt: Date.now()
     },
     revalidate: 1
   }
 }
 
-export default function Home({ reactions }) {
+export default function Home({ reactions, updatedAt }) {
+  const timeString = new Date(updatedAt).toLocaleTimeString();
   return (
     <div className='container'>
       <Head>
@@ -79,6 +81,7 @@ export default function Home({ reactions }) {
 
       <main>
         <h2>Static Reactions Demo</h2>
+    {timeString}
         <h3>
           Reactions on{' '}
           <a href='https://github.com/chibicode/reactions/issues/1'>
