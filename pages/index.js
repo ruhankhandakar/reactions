@@ -4,6 +4,7 @@ export const getStaticProps = async () => {
   return {
     props: {
       updateAt: Date.now(),
+      revalidate: 1
     },
   };
 };
