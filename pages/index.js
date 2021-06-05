@@ -8,7 +8,7 @@ export const getStaticProps = async () => {
   return {
     props: {
       data: allCarriers.data,
-      revalidate: 2,
+      revalidate: 1,
       updateAt: Date.now(),
     },
   };
